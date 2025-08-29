@@ -24,6 +24,7 @@ This repository provides a comprehensive set of GitHub templates, workflow guide
 - **Commit guidelines** with emoji conventions
 - **Issue lifecycle** and management processes
 - **Change type** definitions and classifications
+- **Labeling & colors** definitions and setup (labels, colors, CLI/web instructions)
 
 ## 📖 Documentation Guides
 
@@ -34,6 +35,7 @@ This repository provides a comprehensive set of GitHub templates, workflow guide
 | [📋 Issues](docs/ISSUES.md) | Issue lifecycle and templates | Complete template examples and usage |
 | [🔀 Pull Requests](docs/PULL-REQUESTS.md) | PR process and guidelines | Review requirements, merge strategies |
 | [🏷️ Change Types](docs/TYPES-CHANGES.md) | Semantic change classification | 13 change types with emoji indicators |
+| [🏷️ Labels](docs/NEW-LABELS.md) | Repository labels and color scheme | Label definitions, colors, setup instructions |
 
 ## 🛠️ Template Features
 
