@@ -2,7 +2,7 @@
 name: "🐛 Bug Report"
 about: "Template for reporting problems or bugs found"
 title: "[BUG] "
-labels: ["bug"]
+labels: ["bug-report"]
 assignees: ["dxf"]
 ---
 

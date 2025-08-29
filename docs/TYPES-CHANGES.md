@@ -1,8 +1,8 @@
-## Types of Changes
+## 🏷️ Types of Changes
 
 Commit types with emojis to indicate the purpose of a change in commits, pull requests, or version control history, making it easier to understand the context of each update at a glance.
 
-**Types:**
+### 🔍 Types
 
 - ✨ feat: - A new feature or functionality added to the project.
 - 🔧 fix: - A bug fix or error correction in the codebase.
@@ -17,12 +17,3 @@ Commit types with emojis to indicate the purpose of a change in commits, pull re
 - 🚧 wip: - A temporary commit marking work in progress, not ready for merge.
 - 🔖 release: - Preparation for a new release, including version bump and changelog update.
 - 🔥 hotfix: - An urgent fix, usually applied directly to production; must update version.
-
-## Commits
-
-Commits must always be written in English and begin with the task emoji, followed by a space, a colon (:), another space, and a short lowercase message.
-
-**Example:**
-```commit_example
-git commit -m "✨ feat: example for a feature commit"
-```

@@ -10,7 +10,7 @@
 <!-- Briefly describe what was done and why, preferably in bullet points -->
 - nothing_to_say
 
-### 🛠 Type of change:
+### 🏷️ Type of change:
 <!-- Select one or two that apply -->
 - **TYPE**
 

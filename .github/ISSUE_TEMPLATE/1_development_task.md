@@ -13,12 +13,12 @@ assignees: ["dxf"]
 <!-- Any details, context, or notes to help understand the work -->
 - nothing_to_say
 
-### 🛠 Type of task:
+### 🏷️ Type of task:
 <!-- Select one or two that apply -->
 - **TYPE**
 
 ### 🛠 Implementation / Steps:
-<!-- For bugs: steps to reproduce; for features/refactors: hints or guidance -->
+<!-- Add steps, hints, or guidance if necessary -->
 - nothing_to_say
 
 ### ⏳ Estimated Time:
