@@ -17,7 +17,7 @@
 
 **Workflow:**
 
-![gitflow](https://res.cloudinary.com/dqafdlj0c/image/upload/v1756429136/gitflow-e-museu_glhfyg.png)
+![gitflow](https://github.com/vinifen/gitflow-documentation/blob/main/images/gitflow-branches.png)
 
 **Examples:**
 
