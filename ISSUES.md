@@ -1,16 +1,34 @@
-## Issues
+# 📝 Issue Management Guide
 
-Issues are used to request a task and to report problems or bugs that may exist.
+## 🎯 Overview
 
-We have two types of issues, one to request tasks and another to report errors/bugs/any problem.
+Issues are the primary way to track work, report problems, and suggest improvements in our projects. This guide covers our three issue types and their proper usage.
 
-**Task Development Title Example:**
+## 📋 Issue Types
 
-```task_development_title_example
-[TASK: FEAT] Add new user functionality
-``` 
+We use three standardized issue templates:
 
-**Task Development Template (1_development_task.md):**
+| Type | Purpose | When to Use | Label |
+|------|---------|-------------|-------|
+| 🛠️ **Development Task** | Request development work | Features, improvements, fixes | `task` |
+| 🐛 **Bug Report** | Report problems | Errors, unexpected behavior | `bug` |
+| 💡 **Suggestion** | Share ideas | Improvements, new features | `suggestion` |
+
+## 🛠️ Development Task Template
+
+Used for requesting any development work including features, improvements, and fixes.
+
+### Title Format:
+```
+[TASK: TYPE] Brief description
+```
+
+**Examples:**
+- `[TASK: FEAT] Add user authentication`
+- `[TASK: FIX] Resolve login timeout`
+- `[TASK: REFACTOR] Optimize database queries`
+
+### Template Structure:
 
 ```1_development_task.md
 ---
@@ -42,18 +60,26 @@ assignees: ["dxf"]
 ### 📝 Additional Notes:
 - N/A
 
-### 🔗 Related: 
+### 🔗 Related:
 <!-- List other issues or PRs that are dependencies of this task -->
 - N/A
 ```
 
-**Bug Title Example:**
+## 🐛 Bug Report Template
 
-``` bug_title_example
-[BUG] Add new user functionality
-``` 
+Used for reporting problems, errors, or unexpected behavior in the project.
 
-**Bug Template (2_bug_report.md):**
+### Title Format:
+```
+[BUG] Brief description of the problem
+```
+
+**Examples:**
+- `[BUG] Login form validation error`
+- `[BUG] Dashboard not loading on mobile`
+- `[BUG] API timeout on large requests`
+
+### Template Structure:
 
 ```2_bug_report.md
 ---
@@ -91,18 +117,26 @@ assignees: ["dxf"]
 ### 📝 Additional Notes:
 - N/A
 
-### 🔗 Related: 
+### 🔗 Related:
 <!-- List other issues or PRs that are dependencies of this task -->
 - N/A
 ```
 
-**Suggestion Title:**
+## 💡 Suggestion Template
 
-```suggestion_title:
-[SUGGESTION] A suggestion example
+Used for sharing ideas, proposals, and improvement suggestions.
+
+### Title Format:
+```
+[SUGGESTION] Brief description of the idea
 ```
 
-**Suggestion Template:**
+**Examples:**
+- `[SUGGESTION] Add dark mode theme`
+- `[SUGGESTION] Improve search functionality`
+- `[SUGGESTION] Simplify user onboarding`
+
+### Template Structure:
 
 ```3_suggestion.md
 ---
@@ -126,16 +160,52 @@ assignees: []
 ### 📝 Additional Notes:
 - N/A
 
-### 🔗 Related: 
+### 🔗 Related:
 <!-- List other issues or PRs that are dependencies of this task -->
 - N/A
 ```
-**Config Template:**
+
+## ⚙️ Configuration
+
+Our issue templates are configured to disable blank issues and provide helpful contact links:
+
+### Config Template:
 
 ```config.yml
 blank_issues_enabled: false
 contact_links:
-  - name: 📚 Documentation
-    url: https://github.com/vinifen/issue-test/wiki
-    about: Check the documentation for help
+  # Add your custom contact links here
+  # Example:
+  # - name: 📚 Documentation
+  #   url: https://github.com/your-repo/wiki
+  #   about: Check the documentation for help
 ```
+
+## 📋 Best Practices
+
+### ✅ Creating Good Issues
+
+**Title Guidelines:**
+- Use the correct format: `[TYPE] Description`
+- Be specific and descriptive
+- Use Title Case formatting
+- Keep under 80 characters
+
+**Content Guidelines:**
+- Fill out all relevant template sections
+- Replace "nothing_to_say" with actual information
+- Be clear and concise in descriptions
+- Include examples when helpful
+
+### 🏷️ Labeling
+
+**Automatic Labels:**
+- Templates automatically apply appropriate labels
+- `task` for development work
+- `bug` for bug reports
+- `suggestion` for ideas
+
+**Additional Labels:**
+- Add secondary labels as needed (documentation, test, etc.)
+- Use priority labels if your project has them
+- Keep labeling consistent across issues

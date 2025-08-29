@@ -18,7 +18,7 @@ These labels can be applied manually for better categorization:
 |-------|-------------|-------|-------|
 | `documentation` | Improvements or additions to documentation | `#0075CA` | PR/Issue |
 | `test` | Changes related to testing (adding, updating, fixing tests) | `#1D76DB` | PR/Issue |
-| `fix` | Bug fixes and patches for existing code | `#D73A49` | PR |
+| `fix` | Bug fixes and patches for existing code | `#D73A49` | PR/Issue |
 | `hotfix` | Urgent fixes applied directly to production | `#FF0000` | PR/Issue |
 | `infrastructure` | Infrastructure and environment configuration tasks | `#FF8C00` | PR/Issue |
 | `refactoring` | Code restructuring without changing functionality | `#FBCA04` | PR/Issue |
@@ -72,7 +72,3 @@ gh label create "refactoring" --description "Code restructuring" --color "FBCA04
 - **Be consistent** - Use the same labels across similar issues
 - **Keep it simple** - Don't over-label issues
 - **Update regularly** - Remove outdated labels as issues evolve
-
----
-
-**Consistent labeling makes project management easier! 🎯**

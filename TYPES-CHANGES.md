@@ -1,8 +1,8 @@
-## Types of Changes
+## 🏷️ Types of Changes
 
 Commit types with emojis to indicate the purpose of a change in commits, pull requests, or version control history, making it easier to understand the context of each update at a glance.
 
-**Types:**
+### 🔍 Types
 
 - ✨ feat: - A new feature or functionality added to the project.
 - 🔧 fix: - A bug fix or error correction in the codebase.

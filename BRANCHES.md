@@ -1,25 +1,25 @@
-## Branches
+## 🌿 Branches
 
-**Branches Rules:**
+### 📏 Branch Rules
 - There are two permanent branches: MAIN (production) and DEVELOP.
 - All branches (except HOTFIX) must be created from DEVELOP or another related branch.
 - DEVELOP must always be up to date with MAIN (production) and may stay ahead, since new features are developed there.
 
-**Working branches (created from DEVELOP or a related branch):**
+### 🔀 Working branches (created from DEVELOP or a related branch)
 - Must include: developer’s @, task type, issue number (if applicable), and a short descriptive name.
 - Format: ``@developer/task-type-issue/short-name``
 - Should be deleted after merging when the developer is comfortable.
 
-**RELEASE and HOTFIX branches:**
+### 🚨 Release and Hotfix branches
 - Do not require the developer’s @.
 - Must include: task type, issue number, branch name, and the version being released.
 - Should be deleted after merging when the developer is comfortable.
 
-**Workflow:**
+### 🔁 Workflow
 
 ![gitflow](https://github.com/vinifen/gitflow-documentation/blob/main/images/gitflow-branches.png)
 
-**Examples:**
+### ✨ Examples
 
 ```branch
 git checkout main
@@ -44,5 +44,3 @@ git checkout -b @vinifen/feat/2/create-example
 ```branch
 git checkout -b @vinifen/fix/3/fix-example
 ```
-
-

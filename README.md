@@ -166,13 +166,10 @@ We welcome contributions to improve these templates and workflows:
 
 ## 📈 Benefits
 
-### For Teams
 - **Consistency** across all projects
 - **Faster onboarding** with clear guidelines
 - **Better tracking** of work and progress
 - **Professional** project management
-
-### For Projects
 - **Organized** issue and PR management
 - **Clear history** with semantic commits
 - **Quality control** with comprehensive checklists
@@ -194,4 +191,3 @@ This project is licensed under the [MIT License](LICENSE) - feel free to use and
 [⭐ Star this repo](https://github.com/vinifen/gitflow-documentation) • [🐛 Report Bug](https://github.com/vinifen/gitflow-documentation/issues) • [💡 Request Feature](https://github.com/vinifen/gitflow-documentation/issues)
 
 *Last updated: August 2025*
-
