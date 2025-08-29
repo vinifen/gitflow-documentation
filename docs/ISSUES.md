@@ -46,7 +46,7 @@ assignees: ["dxf"]
 <!-- Any details, context, or notes to help understand the work -->
 - nothing_to_say
 
-### 🛠 Type of task:
+### 🏷️ Type of task:
 <!-- Select one or two that apply -->
 - **TYPE**
 

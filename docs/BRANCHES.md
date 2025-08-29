@@ -17,7 +17,7 @@
 
 ### 🔁 Workflow
 
-![gitflow](https://github.com/vinifen/gitflow-documentation/blob/main/images/gitflow-branches.png)
+![gitflow](https://github.com/vinifen/gitflow-documentation/blob/main/docs/images/gitflow-branches.png)
 
 ### ✨ Examples
 

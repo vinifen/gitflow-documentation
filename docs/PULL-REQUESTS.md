@@ -1,10 +1,12 @@
-## 🔀 Pull Requests
+# 🔀 Pull Requests
 
-HOTFIX and RELEASE pull requests must include the version that will be updated in the commit message.  
-Pull requests to the MAIN branch must always be done as a normal pull request, without squash or rebase.
-Pull request to DEVELOP branch generally should be squash.
+Guidelines:
 
-### ✏️ Title Example
+- HOTFIX and RELEASE pull requests must include the version being released in the commit message.
+- Pull requests to the MAIN branch should use a normal merge (no squash or rebase).
+- Pull requests into the DEVELOP branch are typically squashed.
+
+### ✏️ Title example
 
 ```pr_title_example
 ✨ feat: example for a feature pull request
@@ -24,7 +26,7 @@ Pull request to DEVELOP branch generally should be squash.
 <!-- Briefly describe what was done and why, preferably in bullet points -->
 - nothing_to_say
 
-### 🛠 Type of change:
+### 🏷️ Type of change:
 <!-- Select one or two that apply -->
 - **TYPE**
 

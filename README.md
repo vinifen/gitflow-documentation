@@ -29,11 +29,11 @@ This repository provides a comprehensive set of GitHub templates, workflow guide
 
 | Guide | Description | Key Features |
 |-------|-------------|--------------|
-| [🌿 Branches](BRANCHES.md) | Branch naming and GitFlow strategy | MAIN/DEVELOP workflow, naming conventions |
-| [📝 Commits](COMMITS.md) | Commit message standards | Emoji conventions, English messaging |
-| [📋 Issues](ISSUES.md) | Issue lifecycle and templates | Complete template examples and usage |
-| [🔀 Pull Requests](PULL-REQUESTS.md) | PR process and guidelines | Review requirements, merge strategies |
-| [🏷️ Change Types](TYPES-CHANGES.md) | Semantic change classification | 13 change types with emoji indicators |
+| [🌿 Branches](docs/BRANCHES.md) | Branch naming and GitFlow strategy | MAIN/DEVELOP workflow, naming conventions |
+| [📝 Commits](docs/COMMITS.md) | Commit message standards | Emoji conventions, English messaging |
+| [📋 Issues](docs/ISSUES.md) | Issue lifecycle and templates | Complete template examples and usage |
+| [🔀 Pull Requests](docs/PULL-REQUESTS.md) | PR process and guidelines | Review requirements, merge strategies |
+| [🏷️ Change Types](docs/TYPES-CHANGES.md) | Semantic change classification | 13 change types with emoji indicators |
 
 ## 🛠️ Template Features
 
