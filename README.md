@@ -28,6 +28,10 @@ This repository provides a comprehensive set of GitHub templates, workflow guide
 
 ## 📖 Documentation Guides
 
+### 📋 Quick Reference
+| [**📋 Workflow Summary**](docs/WORKFLOW-SUMMARY.md) | **Complete quick reference guide** | **All processes, templates, and conventions in one place** |
+
+### 📚 Detailed Guides
 | Guide | Description | Key Features |
 |-------|-------------|--------------|
 | [🌿 Branches](docs/BRANCHES.md) | Branch naming and GitFlow strategy | MAIN/DEVELOP workflow, naming conventions |
