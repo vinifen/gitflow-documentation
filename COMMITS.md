@@ -9,7 +9,7 @@ All commits must follow this format:
 **Rules:**
 - Always write in **English**
 - Use **lowercase** for description
-- Keep description **under 50 characters**
+- Keep description **under 60 characters**
 - Use **imperative mood** (add, fix, not added, fixed)
 
 **Examples**
