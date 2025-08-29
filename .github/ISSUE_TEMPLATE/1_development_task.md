@@ -18,7 +18,7 @@ assignees: ["dxf"]
 - **TYPE**
 
 ### 🛠 Implementation / Steps:
-<!-- For bugs: steps to reproduce; for features/refactors: hints or guidance -->
+<!-- Add steps, hints, or guidance if necessary -->
 - nothing_to_say
 
 ### ⏳ Estimated Time:
