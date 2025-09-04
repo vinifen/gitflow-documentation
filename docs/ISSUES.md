@@ -40,7 +40,7 @@ assignees: ["dxf"]
 ---
 
 # 🛠️ Issue_Title
-<!-- Please keep the emoji and use Title Case for the issue title -->
+<!-- Please keep the emoji and use Title Case or Sentence case for the issue title -->
 
 ### ✨ Description / Context:
 <!-- Any details, context, or notes to help understand the work -->
@@ -85,12 +85,13 @@ Used for reporting problems, errors, or unexpected behavior in the project.
 ---
 name: "🐛 Bug Report"
 about: "Template for reporting problems or bugs found"
-title: "[bug] "
-labels: ["bug"]
+title: "[BUG] "
+labels: ["bug-report"]
 assignees: ["dxf"]
 ---
 
 # 🐛 Issue_Title
+<!-- Please keep the emoji and use Title Case or Sentence case for the issue title -->
 
 ### ✨ Description / Context:
 <!-- A clear and concise description of what the bug is -->
@@ -142,12 +143,13 @@ Used for sharing ideas, proposals, and improvement suggestions.
 ---
 name: "💡 Suggestion"
 about: "Template for sharing ideas or suggestions for improvement"
-title: "[suggestion] "
+title: "[SUGGESTION] "
 labels: ["suggestion"]
 assignees: []
 ---
 
 # 💡 Issue_Title
+<!-- Please keep the emoji and use Title Case or Sentence case for the issue title -->
 
 ### ✨ Description / Context:
 <!-- Any details, context, or notes to help understand the suggestion -->

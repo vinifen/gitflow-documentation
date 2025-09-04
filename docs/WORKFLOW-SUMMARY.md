@@ -159,7 +159,7 @@ git commit -m "♻️ refactor: optimize database queries"
 # 1. Create issue: [TASK: FEAT] Add user dashboard
 # 2. Create branch
 git checkout develop
-git checkout -b @john/feat/123/user-dashboard
+git checkout -b @vinifen/feat/123/user-dashboard
 
 # 3. Work and commit
 git commit -m "✨ feat: add dashboard layout"
@@ -173,7 +173,7 @@ git commit -m "✨ feat: implement user stats"
 ```bash
 # 1. Create issue: [BUG] Login validation error
 # 2. Create branch
-git checkout -b @jane/fix/124/login-validation
+git checkout -b @vinifen/fix/124/login-validation
 
 # 3. Fix and commit
 git commit -m "🔧 fix: resolve login form validation"
@@ -185,12 +185,14 @@ git commit -m "🔧 fix: resolve login form validation"
 ```bash
 # 1. Create branch from main
 git checkout main
-git checkout -b hotfix/125/critical-security-v1.1.1
+git checkout -b hotfix/125/critical-security-v1.1
 
 # 2. Fix and commit (include version)
-git commit -m "🔥 hotfix: patch security vulnerability v1.1.1"
+git commit -m "🔥 hotfix: patch security vulnerability v1.1"
+# or
+git commit -m "🔧 fix: patch security vulnerability v1.1"
 
-# 3. PR to main, then merge back to develop
+# 3. PR to main, then merge back to develop, RP will always have a hotfix type 🔥 in the title.
 ```
 
 ---
@@ -241,33 +243,33 @@ git commit -m "🔥 hotfix: patch security vulnerability v1.1.1"
 
 ---
 
-## ✅ Best Practices Checklist
+## ✅ Best Practices
 
 ### Issues
-- [ ] Use correct title format: `[TYPE] Description`
-- [ ] Fill all template sections completely
-- [ ] Replace placeholders with real information
-- [ ] Apply appropriate labels
-- [ ] Link related issues/PRs
+- Use correct title format: `[TYPE] Description`
+- Fill all template sections completely
+- Replace placeholders with real information
+- Apply appropriate labels
+- Link related issues/PRs
 
 ### Commits
-- [ ] Use emoji + type format
-- [ ] Write in English, lowercase description
-- [ ] Keep under 60 characters
-- [ ] Use imperative mood
+- Use emoji + type format
+- Write in English, lowercase description
+- Keep under 60 characters
+- Use imperative mood
 
 ### Pull Requests
-- [ ] Link to related issue
-- [ ] Fill complete PR template
-- [ ] Apply matching labels
-- [ ] Complete all checklist items
-- [ ] Include time spent
+- Link to related issue
+- Fill complete PR template
+- Apply matching labels
+- Complete all checklist items
+- Include time spent
 
 ### Branches
-- [ ] Use correct naming format
-- [ ] Create from appropriate base branch
-- [ ] Delete after successful merge
-- [ ] Include version for releases/hotfixes
+- Use correct naming format
+- Create from appropriate base branch
+- Delete after successful merge
+- Include version for releases/hotfixes
 
 ### 🏷️ Setting Up Labels
 

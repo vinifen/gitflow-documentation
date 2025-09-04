@@ -16,6 +16,7 @@ Guidelines:
 
 ```PULL_REQUEST_TEMPLATE.md
 # 🔖_Pull_Request_Title
+<!-- Put the emoji related to the type and use Title Case or Sentence case for the issue title -->
 
 ### Related Issue: #ISSUE_NUMBER
 <!-- Use: "Related Issue: N/A" if no issue -->
@@ -37,7 +38,7 @@ Guidelines:
 <!-- Any extra context, screenshots, or information for the reviewer -->
 - N/A
 
-### ✅ PR Checklist
+## ✅ PR Checklist
 - [ ] No sensitive information (passwords, API keys, secrets) exposed
 - [ ] All tests run and pass successfully (unit, e2e, lint, etc.)
 - [ ] Code compiles and runs without errors

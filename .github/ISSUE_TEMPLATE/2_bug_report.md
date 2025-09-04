@@ -7,7 +7,7 @@ assignees: ["dxf"]
 ---
 
 # 🐛 Issue_Title
-<!-- Please keep the emoji and use Title Case for the issue title -->
+<!-- Please keep the emoji and use Title Case or Sentence case for the issue title -->
 
 ### ✨ Description / Context:
 <!-- A clear and concise description of what the bug is -->
@@ -34,6 +34,6 @@ assignees: ["dxf"]
 ### 📝 Additional Notes:
 - N/A
 
-### 🔗 Related: 
+### 🔗 Related:
 <!-- List other issues or PRs that are dependencies of this task -->
 - N/A
