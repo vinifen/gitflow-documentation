@@ -234,6 +234,7 @@ git commit -m "🔧 fix: patch security vulnerability v1.1"
 - [🔀 Pull Requests](https://github.com/vinifen/gitflow-documentation/blob/main/docs/PULL-REQUESTS.md) - PR process and guidelines
 - [🏷️ Change Types](https://github.com/vinifen/gitflow-documentation/blob/main/docs/TYPES-CHANGES.md) - Semantic change classification
 - [🏷️ Labels](https://github.com/vinifen/gitflow-documentation/blob/main/docs/NEW-LABELS.md) - Repository labels and colors
+- [🔢 Semantic Versioning](https://github.com/vinifen/gitflow-documentation/blob/main/docs/SEMVER.md) - Version numbering standards
 
 ### 🛠️ Setup Resources
 - [GitHub Templates Documentation](https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests)
