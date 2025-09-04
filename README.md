@@ -39,6 +39,7 @@ This repository provides a comprehensive set of GitHub templates, workflow guide
 | [🔀 Pull Requests](docs/PULL-REQUESTS.md) | PR process and guidelines | Review requirements, merge strategies |
 | [🏷️ Change Types](docs/TYPES-CHANGES.md) | Semantic change classification | 13 change types with emoji indicators |
 | [🏷️ Labels](docs/NEW-LABELS.md) | Repository labels and color scheme | Label definitions, colors, setup instructions |
+| [🔢 Semantic Versioning](docs/SEMVER.md) | Version numbering standards | SemVer guidelines, release workflow |
 
 ## 🛠️ Template Features
 
