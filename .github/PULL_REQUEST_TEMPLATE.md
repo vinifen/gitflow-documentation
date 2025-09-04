@@ -1,5 +1,5 @@
 # 🔖_Pull_Request_Title
-<!-- Please change the emoji to match the type of change and use Title Case for the PR title -->
+<!-- Put the emoji related to the type and use Title Case or Sentence case for the issue title -->
 
 ### Related Issue: #ISSUE_NUMBER
 <!-- Use: "Related Issue: N/A" if no issue -->

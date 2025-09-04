@@ -38,9 +38,9 @@ git checkout develop
 ```
 
 ```branch
-git checkout -b @vinifen/feat/2/create-example
+git checkout -b @dev/feat/2/create-example
 ```
 
 ```branch
-git checkout -b @vinifen/fix/3/fix-example
+git checkout -b @dev/fix/3/fix-example
 ```

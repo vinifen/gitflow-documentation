@@ -2,7 +2,6 @@
 
 **Complete GitHub workflow templates and documentation for standardized development processes.**
 
-
 ## 🎯 Overview
 
 This repository provides a comprehensive set of GitHub templates, workflow guidelines, and best practices to implement consistent development processes across all your projects. From issue tracking to pull request management, branch strategies to commit conventions - everything you need for a professional development workflow.
@@ -59,33 +58,6 @@ This repository provides a comprehensive set of GitHub templates, workflow guide
 - **Title Case guidelines** for consistency
 - **Emoji conventions** for visual clarity
 
-## 🌿 Branch Strategy
-
-```
-  commit id: "Initial"
-  branch develop
-  checkout develop
-  commit id: "Setup"
-  
-  branch "@dev/feat/1/new-feature"
-  checkout "@dev/feat/1/new-feature"
-  commit id: "Feature work"
-  
-  checkout develop
-  merge "@dev/feat/1/new-feature"
-  
-  branch "release/1/v1.0"
-  checkout "release/1/v1.0"
-  commit id: "Release prep"
-  
-  checkout main
-  merge "release/1/v1.0"
-  commit id: "v1.0" tag: "v1.0"
-  
-  checkout develop
-  merge main
-```
-
 **Two permanent branches:**
 - **MAIN** - Production-ready code
 - **DEVELOP** - Integration branch for features
@@ -135,7 +107,7 @@ git commit -m "♻️ refactor: optimize database queries"
 # 2. Create branch from develop
 git checkout develop
 git pull origin develop
-git checkout -b @john/feat/123/user-dashboard
+git checkout -b @vinifen/feat/123/user-dashboard
 
 # 3. Work and commit
 git commit -m "✨ feat: add dashboard layout"
@@ -152,7 +124,7 @@ git commit -m "✨ feat: implement user stats widget"
 # Title: [BUG] Login form validation error
 
 # 2. Developer creates branch
-git checkout -b @jane/fix/124/login-validation
+git checkout -b @vinifen/fix/124/login-validation
 
 # 3. Fix and commit
 git commit -m "🔧 fix: resolve login form validation"
@@ -196,4 +168,4 @@ This project is licensed under the [MIT License](LICENSE) - feel free to use and
 
 [⭐ Star this repo](https://github.com/vinifen/gitflow-documentation) • [🐛 Report Bug](https://github.com/vinifen/gitflow-documentation/issues) • [💡 Request Feature](https://github.com/vinifen/gitflow-documentation/issues)
 
-*Last updated: August 2025*
+*Last updated: September 2025*
