@@ -3,7 +3,7 @@
 Guidelines for version numbering following the Semantic Versioning specification.
 
 ### 📏 Version Format
-All versions must follow the format: `MAJOR.MINOR.PATCH`
+Released artifacts should follow: `MAJOR.MINOR.PATCH` ([SemVer spec](https://semver.org/))
 
 - **MAJOR**: Incremented for breaking changes that are not backward compatible
 - **MINOR**: Incremented for new features that are backward compatible
@@ -74,20 +74,42 @@ v1.2.0-rc.1
 
 ### 🔗 Integration with Workflow
 
-#### Branch Names:
+**Full** vs **simple** here only changes **commit message style** (emoji + type vs plain `type:`). SemVer numbers and **release/hotfix** branch names are the same. Feature-branch naming differs by profile—see [Branches](BRANCHES.md) and [Commits](COMMITS.md).
+
+#### Branch names (both profiles)
+
 ```bash
 # Release branch with version
+git checkout develop
 git checkout -b release/5/v1.2.0
 
-# Hotfix branch with version  
+# Hotfix branch with version (common when cutting a patch release)
 git checkout -b hotfix/8/fix-auth-v1.1.1
+
+# Hotfix branch without version in the name (less common; e.g. merge to develop first—production hotfixes usually carry a version when you release)
+git checkout -b hotfix/9/fix-auth
 ```
 
-#### Commit Messages:
+#### Commit messages
+
+**Full profile** (emoji + type)
+
 ```bash
-# Release commit
+# Release
 git commit -m "🔖 release: new version; v1.2.0"
 
-# Hotfix commit
+# Hotfix (include SemVer when you publish; optional if not releasing yet)
 git commit -m "🔥 hotfix: fix auth issue; v1.1.1"
+git commit -m "🔥 hotfix: fix auth issue"
+```
+
+**Simple profile** (plain Conventional Commits, no emoji)
+
+```bash
+# Release
+git commit -m "release: new version; v1.2.0"
+
+# Hotfix
+git commit -m "hotfix: fix auth issue; v1.1.1"
+git commit -m "hotfix: fix auth issue"
 ```

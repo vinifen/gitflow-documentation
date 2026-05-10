@@ -2,17 +2,17 @@
 
 ## 🎯 Overview
 
-Issues are the primary way to track work, report problems, and suggest improvements in our projects. This guide covers our three issue types and their proper usage.
+Issues are the primary way to track work, report problems, and suggest improvements in our projects. Templates live under **`full-github-templates/.github/`** or **`simple-github-templates/.github/`** — copy **one** bundle so your repo gets `.github/ISSUE_TEMPLATE/` plus `pull_request_template.md` (see [Workflow summary](WORKFLOW-SUMMARY.md)).
 
 ## 📋 Issue Types
 
-We use three standardized issue templates:
+Each bundle ships **three** issue templates with the **same filenames** (`1_development_task.md`, `2_bug_report.md`, `3_suggestion.md`). Choose the **full** or **simple** **root folder** when copying; you do not rename files. The simple bundle uses shorter bodies; full uses longer sections. With **simple**, blank issues are allowed (`blank_issues_enabled: true`); with **full**, they default to off unless you change `config.yml`.
 
-| Type | Purpose | When to Use | Label |
-|------|---------|-------------|-------|
-| 🛠️ **Development Task** | Request development work | Features, improvements, fixes | `task` |
-| 🐛 **Bug Report** | Report problems | Errors, unexpected behavior | `bug` |
-| 💡 **Suggestion** | Share ideas | Improvements, new features | `suggestion` |
+| Type | File | Purpose | Label |
+|------|------|---------|-------|
+| 🛠️ **Development Task** | `1_development_task.md` | Features, improvements, fixes | `task` |
+| 🐛 **Bug Report** | `2_bug_report.md` | Errors, unexpected behavior | `bug-report` |
+| 💡 **Suggestion** | `3_suggestion.md` | Ideas, enhancements | `suggestion` |
 
 ## 🛠️ Development Task Template
 
@@ -36,7 +36,7 @@ name: "🛠️ Development Task"
 about: "Template for requesting a development task, feature, improvement, fix, etc."
 title: "[TASK: TYPE] "
 labels: ["task"]
-assignees: ["dxf"]
+assignees: []
 ---
 
 # 🛠️ Issue_Title
@@ -87,7 +87,7 @@ name: "🐛 Bug Report"
 about: "Template for reporting problems or bugs found"
 title: "[BUG] "
 labels: ["bug-report"]
-assignees: ["dxf"]
+assignees: []
 ---
 
 # 🐛 Issue_Title
@@ -167,20 +167,25 @@ assignees: []
 - N/A
 ```
 
+### Simple bundle (same filenames)
+
+In **`simple-github-templates/.github/ISSUE_TEMPLATE/`**, `1_development_task.md`, `2_bug_report.md`, and `3_suggestion.md` mirror the full bundle names but keep **minimal** sections (for example “Description” / “What happened” / “Idea”). Labels stay `task`, `bug-report`, and `suggestion`.
+
 ## ⚙️ Configuration
 
-Our issue templates are configured to disable blank issues and provide helpful contact links:
+Each bundle includes **`ISSUE_TEMPLATE/config.yml`**.
 
-### Config Template:
+- **simple** — `blank_issues_enabled: true` (optional blank issues).
+- **full** — `blank_issues_enabled: false` (templates encouraged).
+
+### Config example (simple bundle default):
 
 ```config.yml
-blank_issues_enabled: false
+blank_issues_enabled: true
 contact_links:
-  # Add your custom contact links here
-  # Example:
-  # - name: 📚 Documentation
-  #   url: https://github.com/your-repo/wiki
-  #   about: Check the documentation for help
+  - name: Documentation
+    url: https://github.com/your-repo/wiki
+    about: Check the documentation for help
 ```
 
 ## 📋 Best Practices
@@ -203,9 +208,9 @@ contact_links:
 
 **Automatic Labels:**
 - Templates automatically apply appropriate labels
-- `task` for development work
-- `bug` for bug reports
-- `suggestion` for ideas
+- `task` for `1_development_task.md`
+- `bug-report` for `2_bug_report.md`
+- `suggestion` for `3_suggestion.md`
 
 **Additional Labels:**
 - Add secondary labels as needed (documentation, test, etc.)

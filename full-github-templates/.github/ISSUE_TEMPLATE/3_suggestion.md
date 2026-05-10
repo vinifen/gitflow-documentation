@@ -1,6 +1,6 @@
 ---
 name: "💡 Suggestion"
-about: "Template for sharing ideas or suggestions for improvement"
+about: "Full template for ideas or suggestions for improvement"
 title: "[SUGGESTION] "
 labels: ["suggestion"]
 assignees: []

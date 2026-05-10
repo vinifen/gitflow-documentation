@@ -19,7 +19,7 @@ These labels can be applied manually for better categorization:
 | `documentation` | Improvements or additions to documentation | `#0075CA` | PR/Issue |
 | `test` | Changes related to testing (adding, updating, fixing tests) | `#1D76DB` | PR/Issue |
 | `fix` | Bug fixes and patches for existing code | `#D73A49` | PR/Issue |
-| `hotfix` | Urgent fixes applied directly to production | `#FF0000` | PR/Issue |
+| `hotfix` | Urgent fixes—**typically production**; may target develop when needed | `#FF0000` | PR/Issue |
 | `infrastructure` | Infrastructure and environment configuration tasks | `#FF8C00` | PR/Issue |
 | `refactoring` | Code restructuring without changing functionality | `#FBCA04` | PR/Issue |
 
@@ -37,13 +37,13 @@ These labels can be applied manually for better categorization:
 # Core issue labels
 gh label create "task" --description "Work item or development task" --color "0052CC"
 gh label create "suggestion" --description "Proposal or idea for improvement" --color "FFD700" 
-gh label create "bug" --description "Problem or unexpected behavior" --color "D73A49"
+gh label create "bug-report" --description "Problem or unexpected behavior" --color "D73A49"
 
 # Additional labels
 gh label create "documentation" --description "Documentation improvements" --color "0075CA"
 gh label create "test" --description "Testing related changes" --color "1D76DB"
 gh label create "fix" --description "Bug fixes and patches" --color "D73A49"
-gh label create "hotfix" --description "Urgent production fixes" --color "FF0000"
+gh label create "hotfix" --description "Urgent fixes—usually production" --color "FF0000"
 gh label create "infrastructure" --description "Infrastructure tasks" --color "FF8C00"
 gh label create "refactoring" --description "Code restructuring" --color "FBCA04"
 ```
@@ -59,7 +59,7 @@ gh label create "refactoring" --description "Code restructuring" --color "FBCA04
 ## 📊 Label Usage Guidelines
 
 ### For Issues:
-- Always use **one primary label** (task, suggestion, bug)
+- Always use **one primary label** (`task`, `suggestion`, or `bug-report`)
 - Add **secondary labels** as needed (documentation, help-wanted)
 - Apply **priority labels** if your project uses them
 

@@ -1,9 +1,9 @@
 ---
 name: "🐛 Bug Report"
-about: "Template for reporting problems or bugs found"
+about: "Full template for reporting problems or bugs"
 title: "[BUG] "
 labels: ["bug-report"]
-assignees: ["dxf"]
+assignees: []
 ---
 
 # 🐛 Issue_Title

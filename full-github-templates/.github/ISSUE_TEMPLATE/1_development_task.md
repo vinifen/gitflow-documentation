@@ -1,9 +1,9 @@
 ---
 name: "🛠️ Development Task"
-about: "Template for requesting a development task, feature, improvement, fix, etc."
+about: "Full template for a development task, feature, improvement, fix, etc."
 title: "[TASK: TYPE] "
 labels: ["task"]
-assignees: ["dxf"]
+assignees: []
 ---
 
 # 🛠️ Issue_Title
