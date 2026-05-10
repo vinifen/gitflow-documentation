@@ -36,6 +36,8 @@ cp -r path/to/gitflow-documentation/full-github-templates/.github .
 cp -r path/to/gitflow-documentation/simple-github-templates/.github .
 ```
 
+The **source repo** also keeps **`.github/`** at its root, mirroring the **full** bundle, so GitHub Issues and PRs here use the same templates. Update it when you change `full-github-templates/.github/`.
+
 ## ✨ What's Included
 
 ### 📝 **Issue Templates**
@@ -214,8 +216,8 @@ git commit -m "fix: resolve login form validation"
 
 We welcome contributions to improve these templates and workflows:
 
-1. **Report issues** — Describe the problem clearly (install **`full-github-templates/.github`** or **`simple-github-templates/.github`** into a fork if you want GitHub templates locally).
-2. **Suggest improvements** — Same as above; optional templates live under those bundles.
+1. **Report issues** — Describe the problem clearly (this repo already uses the **full** `.github/`; forks inherit it).
+2. **Suggest improvements** — Use the issue templates when helpful; bundles under **`full-github-templates/`** and **`simple-github-templates/`** are for copying into other projects.
 3. **Submit changes** — Open a PR; align the description with [`full-github-templates/.github/pull_request_template.md`](full-github-templates/.github/pull_request_template.md) when possible.
 4. **Enhance docs** — Help improve documentation.
 
