@@ -2,24 +2,39 @@
 
 **Complete quick reference guide for standardized GitHub development workflows, templates, and conventions.**
 
+**Documentation version:** **2.0.0** — canonical value in [`VERSION`](../VERSION) at the repository root.
+
 > 📚 **Source Repository**: [vinifen/gitflow-documentation](https://github.com/vinifen/gitflow-documentation)  
 > 🔗 **Get Templates**: Copy templates and configs from the source repository to implement in your project.
+
+> **Guidelines only:** All recommendations in this summary are **non-prescriptive**. They aim at common **good practices**, not strict compliance. **Adapt** branches, templates, commits, and ceremonies per project—keep what helps, drop or change what does not.
 
 ## 🎯 Overview
 
 This guide provides a comprehensive workflow system for GitHub projects, including:
 
-- **3 Issue Templates** (Development Task, Bug Report, Suggestion)
-- **1 Pull Request Template** with comprehensive checklist
+- **Two template bundles** at repo root — **`full-github-templates/.github`** and **`simple-github-templates/.github`** — each mirrors a real project layout
+- **Full bundle:** 3 issue templates + **`pull_request_template.md`**
+- **Simple bundle:** 3 issue templates + **`pull_request_template.md`**
 - **Complete Documentation** for branches, commits, issues, PRs, and labels
-- **Emoji-based** commit conventions and change types
+- **Two adoption profiles**: **full** (emoji, `@dev/` branches) and **simple** (plain commits, lighter branches)
 - **Ready-to-use** GitHub templates and configurations
 
+### Adoption profiles (quick pick)
+
+| | **Full** | **Simple** |
+|---|----------|------------|
+| Branches | `@dev/type/issue/slug` | `type/issue-slug` or `type/slug` |
+| Commits | `<emoji> type: msg` | `type: msg` |
+| Issues / PRs | Copy **`full-github-templates/.github`** into your repo | Copy **`simple-github-templates/.github`** into your repo |
+
+GitFlow branch topology is unchanged. See [Branches](BRANCHES.md) and [Commits](COMMITS.md).
+
 ### 🚀 Implementation
-1. **Copy templates** from [vinifen/gitflow-documentation](https://github.com/vinifen/gitflow-documentation)
-2. **Adapt** templates to your project needs
-3. **Follow** the conventions outlined in this guide
-4. **Train** your team on the standardized processes
+1. **Clone or browse** [vinifen/gitflow-documentation](https://github.com/vinifen/gitflow-documentation)
+2. **Copy one bundle** — `full-github-templates/.github` or `simple-github-templates/.github` — to your repository root (result: `./.github/…`)
+3. **Adapt** assignees, labels, `config.yml` contact links, and any section that does not fit your team
+4. **Use this guide as reference**, not as a fixed rulebook—adjust conventions until they match how your project works best
 
 ---
 
@@ -29,30 +44,44 @@ This guide provides a comprehensive workflow system for GitHub projects, includi
 - **MAIN** - Production-ready code
 - **DEVELOP** - Integration branch for new features
 
-### Working Branch Format
+### Working branch formats
+
+**Full**
 ```
 @developer/task-type-issue/short-name
 ```
 
-### Examples
-```bash
-# From your project root:
-git checkout -b @john/feat/123/user-dashboard
-git checkout -b @jane/fix/124/login-validation
-git checkout -b hotfix/125/critical-bug-v1.1
-git checkout -b release/126/v1.2
+**Simple**
+```
+task-type/issue-short-name
 ```
 
-> 💡 **Note**: Adapt the `@username` format to match your team's preferences. Some teams prefer initials or full names.
+### Examples
+```bash
+# Full profile:
+git checkout -b @john/feat/123/user-dashboard
+git checkout -b @jane/fix/124/login-validation
+
+# Simple profile:
+git checkout -b feat/123/user-dashboard
+git checkout -b fix/124/login-validation
+
+# Release / hotfix (either profile)—version in the name is optional until you release:
+git checkout main && git checkout -b hotfix/125/critical-bug-v1.1
+git checkout develop && git checkout -b hotfix/126/quick-fix-no-version
+git checkout develop && git checkout -b release/127/v1.2
+```
+
+> 💡 **Note**: In the full profile, adapt `@username` to match your team (GitHub handle, initials, etc.).
 
 ---
 
 ## 📝 Commit Convention
 
 ### Format
-```
-<emoji> <type>: <description>
-```
+
+**Full:** `<emoji> <type>: <description>`  
+**Simple:** `<type>: <description>` (no emoji)
 
 ### Rules
 - Write in **English**
@@ -62,10 +91,12 @@ git checkout -b release/126/v1.2
 
 ### Examples
 ```bash
+# Full
 git commit -m "✨ feat: add user authentication"
-git commit -m "🔧 fix: resolve login timeout"
-git commit -m "📖 docs: update API documentation"
-git commit -m "♻️ refactor: optimize database queries"
+
+# Simple
+git commit -m "feat: add user authentication"
+git commit -m "fix: resolve login timeout"
 ```
 
 ---
@@ -86,26 +117,21 @@ git commit -m "♻️ refactor: optimize database queries"
 | 📈 | `enhancement` | Incremental improvements |
 | 🚧 | `wip` | Work in progress |
 | 🔖 | `release` | Release preparation |
-| 🔥 | `hotfix` | Urgent production fixes |
+| 🔥 | `hotfix` | Urgent fixes—**usually production** (`main`); sometimes `develop` only |
 
 ---
 
 ## 📋 Issue Templates
 
-### 🛠️ Development Task
-- **Format**: `[TASK: TYPE] Brief description`
-- **Label**: `task`
-- **Use for**: Features, improvements, fixes
+**Both bundles use the same filenames** under `.github/ISSUE_TEMPLATE/` (`1_development_task.md`, `2_bug_report.md`, `3_suggestion.md`, plus `config.yml`). Pick **`full-github-templates`** or **`simple-github-templates`** at clone/copy time; you never mix filenames—only the **body** (and default `blank_issues_enabled`) changes.
 
-### 🐛 Bug Report
-- **Format**: `[BUG] Brief description of the problem`
-- **Label**: `bug`
-- **Use for**: Errors, unexpected behavior
+| File | Title hint | Label | Full bundle | Simple bundle |
+|------|------------|-------|-------------|----------------|
+| `1_development_task.md` | `[TASK: TYPE] …` | `task` | Detailed sections | Few sections |
+| `2_bug_report.md` | `[BUG] …` | `bug-report` | Full repro / environment | Short repro |
+| `3_suggestion.md` | `[SUGGESTION] …` | `suggestion` | Context + rationale | Short idea |
 
-### 💡 Suggestion
-- **Format**: `[SUGGESTION] Brief description of the idea`
-- **Label**: `suggestion`
-- **Use for**: Ideas, enhancement proposals
+With the **simple** bundle, **blank issues** are allowed by default (`blank_issues_enabled: true`). **Full** defaults to `false`.
 
 ---
 
@@ -114,19 +140,17 @@ git commit -m "♻️ refactor: optimize database queries"
 ### Branch-Specific Rules
 - **MAIN**: Normal merge (no squash/rebase)
 - **DEVELOP**: Typically squashed
-- **HOTFIX/RELEASE**: Include version in commit message
+- **RELEASE**: Include or reference the version when you are shipping or tagging a release (team convention).
+- **HOTFIX**: **Typically** merged toward **main** / production; version in commits or branch name is **recommended** there. If the hotfix targets **develop** only, versioning is **optional** until you release.
 
-### Title Format
-```
-✨ feat: example for a feature pull request
-```
+### Title format
 
-### Required Sections
-- Related Issue linking
-- Summary of changes
-- Type of change
-- Time spent
-- PR Checklist completion
+**Full:** `✨ feat: example for a feature pull request`  
+**Simple:** `feat: example for a feature pull request`
+
+### Templates
+- **full** — Related issue, overview, type, time spent, extended checklist
+- **simple** — Summary, related issue; optional time-spent section left commented in `pull_request_template.md`
 
 ---
 
@@ -134,14 +158,14 @@ git commit -m "♻️ refactor: optimize database queries"
 
 ### Core Labels (Auto-applied)
 - `task` - Development work (`#0052CC` - Blue)
-- `bug` - Problem reports (`#D73A49` - Red)
+- `bug-report` - Problem reports (`#D73A49` - Red)
 - `suggestion` - Ideas (`#FFD700` - Yellow)
 
 ### Additional Labels (Manual)
 - `documentation` - Docs (`#0075CA` - Blue)
 - `test` - Testing (`#1D76DB` - Blue)
 - `fix` - Bug fixes (`#D73A49` - Red)
-- `hotfix` - Urgent fixes (`#FF0000` - Red)
+- `hotfix` - Urgent fixes—usually production (`#FF0000` - Red)
 - `infrastructure` - Infra (`#FF8C00` - Orange)
 - `refactoring` - Code cleanup (`#FBCA04` - Yellow)
 
@@ -154,74 +178,58 @@ git commit -m "♻️ refactor: optimize database queries"
 
 ## 🚀 Quick Workflow Examples
 
-### Feature Development
+**Full** = `@dev/…` branches + emoji commits · **Simple** = `type/issue-slug` + plain `type:` (see [Branches](BRANCHES.md), [Commits](COMMITS.md)). Same steps; only naming and commit style change.
+
+### Feature (issue → branch → commits → PR)
+
 ```bash
-# 1. Create issue: [TASK: FEAT] Add user dashboard
-# 2. Create branch
-git checkout develop
-git checkout -b @vinifen/feat/123/user-dashboard
-
-# 3. Work and commit
-git commit -m "✨ feat: add dashboard layout"
-git commit -m "✨ feat: implement user stats"
-
-# 4. Create PR: ✨ feat: add user dashboard
-# 5. Link to issue #123
+# Issue e.g. [TASK: FEAT] Add user dashboard → open PR to develop, link #123
+git checkout develop && git pull
+git checkout -b @vinifen/feat/123/user-dashboard    # simple: feat/123/user-dashboard
+git commit -m "✨ feat: add dashboard layout"       # simple: feat: add dashboard layout
+git commit -m "✨ feat: implement user stats"        # simple: feat: implement user stats
 ```
 
-### Bug Fix
+### Bug fix
+
 ```bash
-# 1. Create issue: [BUG] Login validation error
-# 2. Create branch
-git checkout -b @vinifen/fix/124/login-validation
-
-# 3. Fix and commit
-git commit -m "🔧 fix: resolve login form validation"
-
-# 4. Create PR: 🔧 fix: resolve login validation
+# Issue e.g. [BUG] Login validation error
+git checkout develop && git pull
+git checkout -b @vinifen/fix/124/login-validation     # simple: fix/124/login-validation
+git commit -m "🔧 fix: resolve login form validation" # simple: fix: resolve login form validation
 ```
 
 ### Hotfix
+
+Usually from **main** (A); from **develop** (B) when integration comes first. Version in branch/message optional until release—see [BRANCHES](BRANCHES.md).
+
 ```bash
-# 1. Create branch from main
-git checkout main
-git checkout -b hotfix/125/critical-security-v1.1
+# A — main (typical production patch)
+git checkout main && git pull && git checkout -b hotfix/125/critical-security
+git commit -m "🔥 hotfix: patch security issue"       # simple: hotfix: … ; add vX.Y.Z when you tag
 
-# 2. Fix and commit (include version)
-git commit -m "🔥 hotfix: patch security vulnerability v1.1"
-# or
-git commit -m "🔧 fix: patch security vulnerability v1.1"
-
-# 3. PR to main, then merge back to develop, RP will always have a hotfix type 🔥 in the title.
+# B — develop
+git checkout develop && git pull && git checkout -b hotfix/126/config-rollback
+git commit -m "🔥 hotfix: restore config default"     # simple: hotfix: …
 ```
 
 ---
 
-## 📖 Template Files & Setup
+## 📦 Template bundle layout
 
-### 🗂️ Required Files Structure
-```
+Copy **one** of `full-github-templates/.github` or `simple-github-templates/.github` to your repo root. Result:
+
+```text
 .github/
 ├── ISSUE_TEMPLATE/
 │   ├── 1_development_task.md
 │   ├── 2_bug_report.md
 │   ├── 3_suggestion.md
 │   └── config.yml
-└── PULL_REQUEST_TEMPLATE.md
+└── pull_request_template.md
 ```
 
-### 📥 Getting Started
-1. **Download templates** from [vinifen/gitflow-documentation](https://github.com/vinifen/gitflow-documentation)
-2. **Copy `.github` folder** to your repository root
-3. **Customize** assignees and labels in templates
-4. **Update** config.yml with your project links
-5. **Set up labels** using the provided CLI commands
-
-### 🔧 Template Customization
-- **Assignees**: Update `assignees: ["your-username"]` in template headers
-- **Labels**: Modify or add custom labels in template metadata
-- **Contact Links**: Update `config.yml` with project-specific help resources
-- **Descriptions**: Adapt template descriptions to match your project context
+Core issue labels (`task`, `bug-report`, `suggestion`) should exist in the repo—see [NEW-LABELS](NEW-LABELS.md) for **GitHub CLI** commands and colors.
 
 ---
 
@@ -248,68 +256,30 @@ git commit -m "🔧 fix: patch security vulnerability v1.1"
 
 ### Issues
 - Use correct title format: `[TYPE] Description`
-- Fill all template sections completely
+- Fill the template sections that add value for your team
 - Replace placeholders with real information
 - Apply appropriate labels
 - Link related issues/PRs
 
 ### Commits
-- Use emoji + type format
+- Use **full** (`emoji type:`) or **simple** (`type:`) consistently
 - Write in English, lowercase description
 - Keep under 60 characters
 - Use imperative mood
 
 ### Pull Requests
 - Link to related issue
-- Fill complete PR template
+- Use the **`pull_request_template.md`** from the bundle you installed (**full** vs **simple**)
 - Apply matching labels
-- Complete all checklist items
-- Include time spent
+- Complete all checklist items (full bundle includes time spent)
 
 ### Branches
 - Use correct naming format
-- Create from appropriate base branch
+- Create from appropriate base branch (**hotfix usually from `main`** for production; **develop** when your process calls for it)
 - Delete after successful merge
-- Include version for releases/hotfixes
+- Include version when you **release** or tag; hotfixes on **develop** alone may skip version until then
 
-### 🏷️ Setting Up Labels
-
-**Using GitHub CLI** (recommended):
-```bash
-# Core issue labels
-gh label create "task" --description "Work item or development task" --color "0052CC"
-gh label create "suggestion" --description "Proposal or idea for improvement" --color "FFD700" 
-gh label create "bug" --description "Problem or unexpected behavior" --color "D73A49"
-
-# Additional labels
-gh label create "documentation" --description "Documentation improvements" --color "0075CA"
-gh label create "test" --description "Testing related changes" --color "1D76DB"
-gh label create "fix" --description "Bug fixes and patches" --color "D73A49"
-gh label create "hotfix" --description "Urgent production fixes" --color "FF0000"
-gh label create "infrastructure" --description "Infrastructure tasks" --color "FF8C00"
-gh label create "refactoring" --description "Code restructuring" --color "FBCA04"
-```
-
-**Using GitHub Web Interface**:
-1. Go to your repository → **Issues** → **Labels**
-2. Click **New label**
-3. Add name, description, and color from the table above
-
----
-
-## 🤝 Contributing & Support
-
-### 📝 Improvements
-Found an issue or have a suggestion for these workflows? 
-- **Report issues**: [Create an issue](https://github.com/vinifen/gitflow-documentation/issues)
-- **Suggest improvements**: [Submit suggestions](https://github.com/vinifen/gitflow-documentation/issues)
-- **Contribute**: [Submit a pull request](https://github.com/vinifen/gitflow-documentation/pulls)
-
-### 📞 Getting Help
-- **Documentation**: Check the [full documentation](https://github.com/vinifen/gitflow-documentation)
-- **Examples**: See real-world usage in the source repository
-
----
+**Assistive / AI:** Attribute Git work to the **human** author and your **full/simple** conventions—never replace them with model or tool names in commits or branch names. Details: [Branches](BRANCHES.md), [Commits](COMMITS.md).
 
 ## 📄 License & Attribution
 

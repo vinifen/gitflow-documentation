@@ -1,8 +1,8 @@
-# 🔖_Pull_Request_Title
-<!-- Put the emoji related to the type and use Title Case or Sentence case for the issue title -->
+# 📋 Pull request title
+<!-- Emoji at the start of the title is optional; it is still helpful when your team uses change-type emojis (e.g. ✨ feat, 🔧 fix). Use Title Case or sentence case for the title text. -->
 
 ### Related Issue: #ISSUE_NUMBER
-<!-- Use: "Related Issue: N/A" if no issue -->
+<!-- Use "Related Issue: N/A" if no issue -->
 
 ## 🔄 Change Overview
 
