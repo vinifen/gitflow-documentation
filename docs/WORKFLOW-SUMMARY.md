@@ -2,6 +2,8 @@
 
 **Complete quick reference guide for standardized GitHub development workflows, templates, and conventions.**
 
+**Documentation version:** **2.0.0** — canonical value in [`VERSION`](../VERSION) at the repository root.
+
 > 📚 **Source Repository**: [vinifen/gitflow-documentation](https://github.com/vinifen/gitflow-documentation)  
 > 🔗 **Get Templates**: Copy templates and configs from the source repository to implement in your project.
 

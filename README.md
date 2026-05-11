@@ -2,6 +2,8 @@
 
 #### v2.0.0
 
+Single source of truth for the number: [`VERSION`](VERSION).
+
 **Complete GitHub workflow templates and documentation for standardized development processes.**
 
 ## 🎯 Overview
